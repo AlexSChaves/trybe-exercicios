@@ -175,6 +175,7 @@ if (lucro > 0) {
 
 /**********Exercício 11**********/
 
+/*
 let inss;
 let ir;
 
@@ -205,3 +206,4 @@ if (salarioBase <= 1903.98) {
 }
 
 console.log("Seu salário liquido é de R$ " + (salarioBase - ir));
+*/
