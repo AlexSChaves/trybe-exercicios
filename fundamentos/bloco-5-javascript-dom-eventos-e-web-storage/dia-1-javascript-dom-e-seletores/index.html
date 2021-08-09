@@ -75,7 +75,15 @@
             upper[i].style.textTransform = "uppercase";
           }
         }
-          // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        function showHTML(){
+          let show = document.getElementsByTagName('p')
+          
+          for (i = 0; i < show.length; i += 1){
+            console.log(show[i].innerHTML);
+          }  
+        }
+        
         mudaTexto(); 
         corVerde();
         corBranca();
