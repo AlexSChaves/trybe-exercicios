@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      
+      //Requisito 1
+      function hone(){
+        let hone = document.createElement("H1");
+        //Requisito bônus 1
+        hone.className = "title"
+        let thone = document.createTextNode("Exercício 5.2 - JavaScript DOM")
+        hone.appendChild(thone)
+        document.querySelector('body').appendChild(hone)
+      }
+
+      //Requisito 2
+      function main(){
+        let main = document.createElement('MAIN');
+        main.className = "main-content"
+        document.querySelector('body').appendChild(main)
+      }
+      
+      //Requisito 3
+      function sectionCenter(){
+        let scenter = document.createElement('SECTION');
+        scenter.className = "center-content"
+        document.querySelector('main').appendChild(scenter)
+        //requisito bônus 5
+        document.querySelector('.center-content').style.backgroundColor = "green"
+      }
+
+      //Requisito 4
+      function para(){
+        let para = document.createElement('P')
+        document.getElementsByClassName('center-content')[0].appendChild(para)
+      }
+
+      //Requisito 5
+      function sectionLeft(){
+        let sleft = document.createElement('SECTION');
+        sleft.className = 'left-content'
+        document.querySelector('main').appendChild(sleft)
+      }
+
+      //Requisito 6
+      function sectionRight(){
+        let sright = document.createElement('SECTION');
+        sright.className = 'right-content'
+        document.querySelector('main').appendChild(sright)
+        //Requisito bônus 4
+        document.querySelector('.right-content').style.marginRight = 'auto'
+      }
+
+      //Requisito 7
+      function leftImg(){
+        let limg = document.createElement('IMG')
+        limg.src = "https://picsum.photos/200"
+        limg.className = 'small-image'
+        document.getElementsByClassName('left-content')[0].appendChild(limg)
+      }
+
+      //Requisito 8
+      function orderList(){
+        let orli = document.createElement('OL')
+        document.getElementsByClassName("right-content")[0].appendChild(orli)
+        
+        let arrItems = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        //requisito bônus 6
+        arrItems.splice(8)
+        //
+        let list = document.querySelector('OL');
+
+        for(i = 0; i < arrItems.length; i += 1){
+          let items = arrItems[i];
+          
+          let arrListItem = document.createElement('LI');
+          arrListItem.innerText = items;
+
+          list.appendChild(arrListItem);
+        } 
+      }
+
+      //Requisito 9
+      function hthree(){
+        let hthreeOne = document.createElement('H3')
+        hthreeOne.className = "description"
+        let hthreeTwo = document.createElement('H3')
+        hthreeTwo.className = "description"
+        let hthreeThree = document.createElement('H3')
+        hthreeThree.className = "description"
+        let main = document.querySelector('main')
+        //Requisito bônus 2
+        main.appendChild(hthreeOne) 
+        main.appendChild(hthreeTwo)
+        main.appendChild(hthreeThree)
+      }
+      
+      //Requisito bônus 3
+      function teste(){
+        let principal = document.querySelector('main')
+        principal.removeChild(principal.childNodes[1])
+      }  
+
+      hone();
+      main();
+      sectionCenter();
+      para();
+      sectionLeft();
+      sectionRight();
+      leftImg();
+      orderList();
+      hthree();
+      teste();
+    </script>
+  </body>
+</html>
