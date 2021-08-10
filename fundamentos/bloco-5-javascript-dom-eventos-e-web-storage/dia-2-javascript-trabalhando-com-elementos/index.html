@@ -61,6 +61,7 @@
       //Requisito 1
       function hone(){
         let hone = document.createElement("H1");
+        hone.className = "title"
         let thone = document.createTextNode("Exercício 5.2 - JavaScript DOM")
         hone.appendChild(thone)
         document.querySelector('body').appendChild(hone)
@@ -78,6 +79,7 @@
         let scenter = document.createElement('SECTION');
         scenter.className = "center-content"
         document.querySelector('main').appendChild(scenter)
+        document.querySelector('.center-content').style.backgroundColor = "green"
       }
 
       //Requisito 4
@@ -129,14 +131,18 @@
       //Requisito 9
       function hthree(){
         let hthreeOne = document.createElement('H3')
+        hthreeOne.className = "description"
         let hthreeTwo = document.createElement('H3')
+        hthreeTwo.className = "description"
         let hthreeThree = document.createElement('H3')
+        hthreeThree.className = "description"
         let main = document.querySelector('main')
         main.appendChild(hthreeOne) 
         main.appendChild(hthreeTwo)
         main.appendChild(hthreeThree)
       }
 
+      
       hone();
       main();
       sectionCenter();
