@@ -100,12 +100,21 @@
         document.querySelector('main').appendChild(sright)
       }
 
+      //Requisito 7
+      function leftImg(){
+        let limg = document.createElement('IMG')
+        limg.src = "https://picsum.photos/200"
+        limg.className = 'small-image'
+        document.getElementsByClassName('left-content')[0].appendChild(limg)
+      }
+
       hone();
       main();
       sectionCenter();
       para();
       sectionLeft();
       sectionRight();
+      leftImg();
     </script>
   </body>
 </html>
