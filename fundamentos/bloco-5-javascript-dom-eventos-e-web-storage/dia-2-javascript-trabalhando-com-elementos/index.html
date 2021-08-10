@@ -108,6 +108,24 @@
         document.getElementsByClassName('left-content')[0].appendChild(limg)
       }
 
+      //Requisito 8
+      function orderList(){
+        let orli = document.createElement('OL')
+        document.getElementsByClassName("right-content")[0].appendChild(orli)
+        
+        let arrItems = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        let list = document.querySelector('OL');
+
+        for(i = 0; i < arrItems.length; i += 1){
+          let items = arrItems[i];
+          
+          let arrListItem = document.createElement('LI');
+          arrListItem.innerText = items;
+
+          list.appendChild(arrListItem);
+        }
+      }
+
       hone();
       main();
       sectionCenter();
@@ -115,6 +133,7 @@
       sectionLeft();
       sectionRight();
       leftImg();
+      orderList();
     </script>
   </body>
 </html>
