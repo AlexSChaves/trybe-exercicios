@@ -79,9 +79,16 @@
         scenter.className = "center-content"
         document.querySelector('main').appendChild(scenter)
       }
+
+      //Requisito 4
+      function para(){
+        let para = document.createElement('P')
+        document.getElementsByClassName('center-content')[0].appendChild(para)
+      }
       hone();
       main();
       sectionCenter();
+      para();
     </script>
   </body>
 </html>
