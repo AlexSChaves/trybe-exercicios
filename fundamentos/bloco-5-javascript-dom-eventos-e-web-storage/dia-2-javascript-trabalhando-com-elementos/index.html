@@ -61,6 +61,7 @@
       //Requisito 1
       function hone(){
         let hone = document.createElement("H1");
+        //Requisito bônus 1
         hone.className = "title"
         let thone = document.createTextNode("Exercício 5.2 - JavaScript DOM")
         hone.appendChild(thone)
@@ -79,6 +80,7 @@
         let scenter = document.createElement('SECTION');
         scenter.className = "center-content"
         document.querySelector('main').appendChild(scenter)
+        //requisito bônus 5
         document.querySelector('.center-content').style.backgroundColor = "green"
       }
 
@@ -116,6 +118,8 @@
         document.getElementsByClassName("right-content")[0].appendChild(orli)
         
         let arrItems = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        //requisito bônus 6
+        arrItems.splice(8)
         let list = document.querySelector('OL');
 
         for(i = 0; i < arrItems.length; i += 1){
@@ -126,6 +130,8 @@
 
           list.appendChild(arrListItem);
         }
+
+        
       }
 
       //Requisito 9
@@ -137,6 +143,7 @@
         let hthreeThree = document.createElement('H3')
         hthreeThree.className = "description"
         let main = document.querySelector('main')
+        //Requisito bônus 2
         main.appendChild(hthreeOne) 
         main.appendChild(hthreeTwo)
         main.appendChild(hthreeThree)
