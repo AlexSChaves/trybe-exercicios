@@ -85,10 +85,19 @@
         let para = document.createElement('P')
         document.getElementsByClassName('center-content')[0].appendChild(para)
       }
+
+      //Requisito 5
+      function sectionLeft(){
+        let sleft = document.createElement('SECTION');
+        sleft.className = 'left-content'
+        document.querySelector('main').appendChild(sleft)
+      }
+
       hone();
       main();
       sectionCenter();
       para();
+      sectionLeft();
     </script>
   </body>
 </html>
