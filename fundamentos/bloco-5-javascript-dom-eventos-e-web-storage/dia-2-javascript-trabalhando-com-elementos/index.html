@@ -73,8 +73,15 @@
         document.querySelector('body').appendChild(main)
       }
       
+      //Requisito 3
+      function sectionCenter(){
+        let scenter = document.createElement('SECTION');
+        scenter.className = "center-content"
+        document.querySelector('main').appendChild(scenter)
+      }
       hone();
       main();
+      sectionCenter();
     </script>
   </body>
 </html>
