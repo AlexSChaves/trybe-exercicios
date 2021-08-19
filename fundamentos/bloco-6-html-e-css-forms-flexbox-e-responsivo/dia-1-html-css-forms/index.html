@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <form action="" method="get">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="input-user">Nome:</label>
+      <input type="text" name="user" id="input-user" maxlength="40" required>
+      <br><br>
+      <label for="input-email">Email:</label>
+      <input type="email" name="email" id="input-email" maxlength="50" required>
+      <br><br>
+      <label for="input-cpf">CPF:</label>
+      <input type="text" name="cpf" id="input-cpf" pattern="[0-9]{11}" required>
+      <br><br>
+      <label for="input-adress">Endereço:</label>
+      <input type="text" name="adress" id="input-adress" maxlength="200" required>
+      <br><br>
+      <label for="input-city">Cidade:</label>
+      <input type="text" name="city" id="input-city" maxlength="28" required>
+      <br><br>
+      <select name="" id="states" required>
+      </select>
+      <br><br>
+      <input type="radio" name="house" id="input-house"><label for="input-house">Casa</label>
+      <input type="radio" name="apart" id="input-apart"><label for="input-apart">Apartamento</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados do seu último emprego</legend>
+      <p>Resumo do currículo:</p>
+      <textarea name="" id="textares-resumo" cols="30" rows="10" maxlength="1000" required>Informa suas principais competências</textarea>
+      <p>Cargo:</p>
+      <input type="text" name="cargo" id="input-cargo" required>
+      <p>Descrição do Cargo:</p>
+      <input type="text" name="descricao" id="input-descricao" maxlength="500" required>
+      <p>Data de início: </p>
+      <input type="date" name="" id="" required>  
+    </fieldset>
+    <br>
+    <button type="submit" class="submit-button" >Enviar</button>
+    <button type="button" class="clear-button" >Limpar</button>
+  </form>
+  <div>
+    <p id="user"></p>
+    <p id="email"></p>
+    <p id="cpf"></p>
+    <p id="adress"></p>
+    <p id="city"></p>
+    <p id="state"></p>
+    <p id="resumo"></p>
+    <p id="cargo"></p>
+    <p id="data"></p>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
