@@ -111,3 +111,25 @@ footer p{
     margin: 0 20px;
   }
 }
+
+@media (min-width: 1080px){
+  .container header p{
+    font-size: 30px;
+  }
+
+  .container header nav ul li{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  .main-content h1{
+    font-size: xx-large;
+  }
+
+  .aside-one ul li, .aside-two ul li{
+    font-size: 18px;
+  }
+}
